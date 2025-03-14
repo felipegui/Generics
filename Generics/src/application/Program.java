@@ -3,19 +3,20 @@ package application;
 import java.util.Scanner;
 
 import services.PrintService;
+import services.PrintServiceString;
 
 public class Program {
     public static void main(String[] args) throws Exception {
 
         Scanner sc = new Scanner(System.in);
 
-        PrintService ps = new PrintService();
+        PrintServiceString ps = new PrintServiceString();
 
         System.out.print("How many value? ");
         int values = sc.nextInt();
 
         for (int i = 0; i < values; i++) {
-            int value = sc.nextInt();
+            String value = sc.next();
             ps.addValue(value);
         }
 
